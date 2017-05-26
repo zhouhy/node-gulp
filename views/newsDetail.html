@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="{{data.detail.data.title}}" />
+    <meta name="description" content="{{data.detail.data.description}}" />
+    <link rel="stylesheet" href="http://cdn.drore.com/cdn/less/reset.min.css" />
+    <link rel="stylesheet" href="/css/news.css?v=c249d6bbdf" />
+    <title>{{data.detail.data.title}}-台州府城</title>
+</head>
+<body>
+{{include './public/head.html'}}
+<div class="crumb">
+    <div class="wrapper">
+        <a href="/">首页</a> >
+        <a href="/news/all/page/1">新闻中心</a> >
+        {{data.detail.data.type}}
+    </div>
+</div>
+<div class="news-container">
+    <div class="out-wrapper">
+    <div class="wrapper">
+
+        <div class="news-content">
+            <h1>
+                {{data.detail.data.title}}
+            </h1>
+            <p class="time">{{data.detail.data.create_time.substr(0,10)}}</p>
+            <div class="intro">
+                {{@data.detail.data.info}}
+                　　
+            </div>
+        </div>
+        <div class="news-aside">
+            <h2>新闻热点</h2>
+            <p>
+                <img src="/img/temp/11.png" alt="">
+            </p>
+            <ul class="news-aside-item">
+                {{each data.hot.data list idx}}
+                <li>
+                    <a href="/newsDetail/{{list.id}}"><span>[{{idx + 1}}]</span> {{list.title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            <h2>相关新闻</h2>
+
+            <ul class="news-aside-item">
+                {{each data.relation.data list idx}}
+                <li>
+                    <a href="/newsDetail/{{list.id}}"> {{list.title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+{{include './public/foot.html'}}
+</body>
+</html>

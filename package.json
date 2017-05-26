@@ -1,0 +1,43 @@
+{
+  "name": "tzfczww-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "taizhoufucWebsite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhouhy",
+  "license": "ISC",
+  "dependencies": {
+    "accord": "^0.27.3",
+    "art-template": "^4.2.0",
+    "async": "^2.2.0",
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-art-template": "^1.0.0",
+    "express-handlebars": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-dev": "^0.3.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-collector": "^1.2.1",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "hbs": "^4.0.1",
+    "jpegtran-bin": "^3.2.0",
+    "laypage": "^1.1.5",
+    "log4js": "^1.1.1",
+    "request": "^2.81.0",
+    "require-dir": "^0.3.1",
+    "step": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

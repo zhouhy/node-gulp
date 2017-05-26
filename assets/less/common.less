@@ -1,0 +1,311 @@
+@redcolor:#ed1b24;
+@bluecolor:#31c4ef;
+@rosecolor:#9f3266;
+.line-style {
+  content: '';
+  visibility: visible;
+  width: 1px;
+  background-color: #ddd;
+  right:-10px;
+  top:0;
+  position: absolute;
+  display: block;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  color: #333;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  height: 65px;
+  background-color: #1a1a1a;
+  a {
+    color: #fff;
+    &:hover {
+      color: #aaa;
+    }
+    &.active {
+      color: #aaa;
+    }
+  }
+  .logo {
+    float: left;
+    width: 330px;
+    padding-top: 20px;
+    text-align: left;
+  }
+}
+.navbar {
+  float: left;
+  width: 870px;
+  height: 45px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+  > ul > li {
+    float:left;
+    font-size: 13px;
+    width: 170px;
+    position: relative;
+    &:last-child {
+      padding-right: 0;
+    }
+    h3 {
+      position: relative;
+      display: inline-block;
+      i {
+        background: url(../img/arrow.png) no-repeat right 0;
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 8px;
+        right:-25px;
+        top:8px;
+      }
+    }
+    &.on {
+      i {
+        background-position: 0 0;
+      }
+      a {
+        color: #aaa;
+      }
+      .subnav a {
+        color: #333;
+      }
+    }
+  }
+  .subnav {
+    display: none;
+    width: 170px;
+    padding: 10px;
+    position: absolute;
+    left: -10px;
+    top: 60px;
+    background: #fff;
+    float: left;
+    line-height: 30px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      position: absolute;
+      left:77px;
+      top:-16px;
+      border:8px solid #ccc;
+      border-right:8px solid transparent;
+      border-left:8px solid transparent;
+      border-top:8px solid transparent;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      position: absolute;
+      left:78px;
+      top:-13px;
+      border:7px solid #fff;
+      border-right:7px solid transparent;
+      border-left:7px solid transparent;
+      border-top:7px solid transparent;
+    }
+    li {
+      text-align: center;
+      border:1px solid #fff;
+      &:hover {
+        border:1px solid #1bbeed;
+      }
+      a {
+        color: #333;
+      }
+    }
+  }
+}
+.banner {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  img {width: 100%;}
+}
+.icon-views {
+  width: 18px;
+  height: 15px;
+  display: inline-block;
+  background: url(../img/icon-views.png) no-repeat left center;
+  vertical-align: middle;
+}
+.footer {
+  background-color: #1a1a1a;
+  height: 140px;
+  clear: both;
+  margin: 40px 0 0 0;
+  padding: 20px 0 0 0;
+  .wrapper {
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  .footer-left {
+    float: left;
+  }
+  .site {
+    a {
+      margin: 0 10px;
+    }
+  }
+  .copyright {
+    padding:20px 0 0 10px;
+  }
+  .footer-right {
+    float: right;
+    .weibo {
+      display: inline-block;
+      margin-right:40px;
+    }
+    .weixin {
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+.crumb {
+  width: 100%;
+  height: 20px;
+  border-top:1px solid #b3a2a0;
+  border-bottom:1px solid #b3a2a0;
+  background-color: #f2edea;
+  padding: 12px 0;
+  font-size: 13px;
+  .wrapper {
+    color: #9d8583;
+  }
+  a {
+    color: #9d8583;
+  }
+}
+
+/* laypage分页 */
+.laypage-main,
+.laypage-main *{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+.laypage-main{margin:20px 0;  border-right: none; border-bottom: none; font-size: 0;}
+.laypage-main *{padding: 0 15px; line-height:28px;  font-size:14px;}
+.laypage-main .laypage-curr{ color:#ca3636;}
+
+/*==========以下部分是Validform必须的===========*/
+
+.Validform_checktip {
+  margin-left: 8px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: #999;
+  display: block;
+  font-size: 14px;
+  text-align: left;/*
+  clear: both;
+  margin-left:110px;
+  display: block;*/
+}
+.ml110 .Validform_checktip {
+  clear: both;
+  margin-left:110px;
+  display: block;
+}
+
+.Validform_right {
+  color: #71b83d;
+  padding-left: 20px;
+  background: url(../img/right.png) no-repeat left center;
+}
+
+.Validform_wrong {
+  color: red;
+  padding-left: 20px;
+  white-space: nowrap;
+  background: url(../img/error.png) no-repeat left center;
+}
+
+.Validform_loading {
+  padding-left: 20px;
+  background: url(../img/onLoad.gif) no-repeat left center;
+}
+
+.Validform_error {
+  background-color: #ffe7e7;
+}
+
+#Validform_msg {
+  color: #7d8289;
+  width: 280px;
+  -webkit-box-shadow: 2px 2px 3px #aaa;
+  -moz-box-shadow: 2px 2px 3px #aaa;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  z-index: 99999;
+  display: none;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#Validform_msg .iframe {
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  z-index: -1;
+}
+
+#Validform_msg .Validform_title {
+  line-height: 25px;
+  height: 25px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 8px;
+  color: #fff;
+  position: relative;
+  background-color: #999;
+  background: -moz-linear-gradient(top, #999, #666 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#999), to(#666));
+}
+
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited {
+  line-height: 22px;
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#Validform_msg a.Validform_close:hover {
+  color: #ccc;
+}
+
+#Validform_msg .Validform_info {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-top: none;
+  text-align: left;
+}
+.adv {
+  position: fixed;
+  left:30px;
+  top:20%;
+}

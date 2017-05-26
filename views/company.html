@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://cdn.drore.com/cdn/less/reset.min.css" />
+    <link rel="stylesheet" href="/css/news.css?v=c249d6bbdf" />
+    <title>{{data.data[0].name}}-台州府城</title>
+</head>
+<body>
+{{include './public/head.html'}}
+<div class="crumb">
+    <div class="wrapper">
+        <a href="/">首页</a> >
+        <a href="/company">公司概况</a> >
+    </div>
+</div>
+<div class="service-wrapper">
+    <div class="wrapper">
+        <div class="company-content">
+            <h1 >
+                {{data.data[0].name}}
+            </h1>
+            <div class="content">
+                {{@data.data[0].detail}}
+                <p>
+                    <img src="{{data.data[0].image}}" alt="{{data.data[0].name}}">
+                </p>
+            </div>
+        </div>
+        <div class="service_tel">
+            <img src="/img/service_tel.jpg" alt="" />
+        </div>
+    </div>
+</div>
+{{include './public/foot.html'}}
+</body>
+</html>

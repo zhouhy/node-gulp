@@ -1,0 +1,581 @@
+.line-style {
+  content: '';
+  visibility: visible;
+  width: 1px;
+  background-color: #ddd;
+  right: -10px;
+  top: 0;
+  position: absolute;
+  display: block;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  color: #333;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  height: 65px;
+  background-color: #1a1a1a;
+}
+.header a {
+  color: #fff;
+}
+.header a:hover {
+  color: #aaa;
+}
+.header a.active {
+  color: #aaa;
+}
+.header .logo {
+  float: left;
+  width: 330px;
+  padding-top: 20px;
+  text-align: left;
+}
+.navbar {
+  float: left;
+  width: 870px;
+  height: 45px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+.navbar > ul > li {
+  float: left;
+  font-size: 13px;
+  width: 170px;
+  position: relative;
+}
+.navbar > ul > li:last-child {
+  padding-right: 0;
+}
+.navbar > ul > li h3 {
+  position: relative;
+  display: inline-block;
+}
+.navbar > ul > li h3 i {
+  background: url(../img/arrow.png) no-repeat right 0;
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  right: -25px;
+  top: 8px;
+}
+.navbar > ul > li.on i {
+  background-position: 0 0;
+}
+.navbar > ul > li.on a {
+  color: #aaa;
+}
+.navbar > ul > li.on .subnav a {
+  color: #333;
+}
+.navbar .subnav {
+  display: none;
+  width: 170px;
+  padding: 10px;
+  position: absolute;
+  left: -10px;
+  top: 60px;
+  background: #fff;
+  float: left;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.navbar .subnav:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  position: absolute;
+  left: 77px;
+  top: -16px;
+  border: 8px solid #ccc;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid transparent;
+}
+.navbar .subnav:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  position: absolute;
+  left: 78px;
+  top: -13px;
+  border: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-top: 7px solid transparent;
+}
+.navbar .subnav li {
+  text-align: center;
+  border: 1px solid #fff;
+}
+.navbar .subnav li:hover {
+  border: 1px solid #1bbeed;
+}
+.navbar .subnav li a {
+  color: #333;
+}
+.banner {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.banner img {
+  width: 100%;
+}
+.icon-views {
+  width: 18px;
+  height: 15px;
+  display: inline-block;
+  background: url(../img/icon-views.png) no-repeat left center;
+  vertical-align: middle;
+}
+.footer {
+  background-color: #1a1a1a;
+  height: 140px;
+  clear: both;
+  margin: 40px 0 0 0;
+  padding: 20px 0 0 0;
+}
+.footer .wrapper {
+  color: #fff;
+}
+.footer .wrapper a {
+  color: #fff;
+}
+.footer .footer-left {
+  float: left;
+}
+.footer .site a {
+  margin: 0 10px;
+}
+.footer .copyright {
+  padding: 20px 0 0 10px;
+}
+.footer .footer-right {
+  float: right;
+}
+.footer .footer-right .weibo {
+  display: inline-block;
+  margin-right: 40px;
+}
+.footer .footer-right .weixin {
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
+.crumb {
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #b3a2a0;
+  border-bottom: 1px solid #b3a2a0;
+  background-color: #f2edea;
+  padding: 12px 0;
+  font-size: 13px;
+}
+.crumb .wrapper {
+  color: #9d8583;
+}
+.crumb a {
+  color: #9d8583;
+}
+/* laypage分页 */
+.laypage-main,
+.laypage-main * {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+.laypage-main {
+  margin: 20px 0;
+  border-right: none;
+  border-bottom: none;
+  font-size: 0;
+}
+.laypage-main * {
+  padding: 0 15px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.laypage-main .laypage-curr {
+  color: #ca3636;
+}
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip {
+  margin-left: 8px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: #999;
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  /*
+  clear: both;
+  margin-left:110px;
+  display: block;*/
+}
+.ml110 .Validform_checktip {
+  clear: both;
+  margin-left: 110px;
+  display: block;
+}
+.Validform_right {
+  color: #71b83d;
+  padding-left: 20px;
+  background: url(../img/right.png) no-repeat left center;
+}
+.Validform_wrong {
+  color: red;
+  padding-left: 20px;
+  white-space: nowrap;
+  background: url(../img/error.png) no-repeat left center;
+}
+.Validform_loading {
+  padding-left: 20px;
+  background: url(../img/onLoad.gif) no-repeat left center;
+}
+.Validform_error {
+  background-color: #ffe7e7;
+}
+#Validform_msg {
+  color: #7d8289;
+  width: 280px;
+  -webkit-box-shadow: 2px 2px 3px #aaa;
+  -moz-box-shadow: 2px 2px 3px #aaa;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  z-index: 99999;
+  display: none;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+#Validform_msg .iframe {
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  z-index: -1;
+}
+#Validform_msg .Validform_title {
+  line-height: 25px;
+  height: 25px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 8px;
+  color: #fff;
+  position: relative;
+  background-color: #999;
+  background: -moz-linear-gradient(top, #999, #666 100%);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#999), to(#666));
+}
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited {
+  line-height: 22px;
+  position: absolute;
+  right: 8px;
+  top: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+#Validform_msg a.Validform_close:hover {
+  color: #ccc;
+}
+#Validform_msg .Validform_info {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-top: none;
+  text-align: left;
+}
+.adv {
+  position: fixed;
+  left: 30px;
+  top: 20%;
+}
+.service-wrapper {
+  width: 100%;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  text-align: center;
+}
+.service-wrapper .title {
+  margin: 30px 0;
+}
+.service-wrapper .complaint-bar {
+  font-size: 13px;
+}
+.service-wrapper .complaint-bar span {
+  margin: 0 10px;
+}
+.service-wrapper .complaint-bar a {
+  color: #999;
+}
+.service-wrapper .complaint-bar a:hover {
+  color: #9d8583;
+}
+.service-wrapper .complaint-bar .active a {
+  color: #9d8583;
+}
+.service-wrapper .needknow-content {
+  padding: 85px 0 100px 0;
+  width: 1100px;
+  color: #666;
+  overflow: hidden;
+  font-size: 14px;
+}
+.service-wrapper .needknow-content > div {
+  float: left;
+  width: 326px;
+  margin: 0 20px;
+}
+.service-wrapper .needknow-content .needknow-content-m .item:before,
+.service-wrapper .needknow-content .needknow-content-r .item:before {
+  content: '';
+  visibility: visible;
+  width: 1px;
+  background-color: #ddd;
+  right: -10px;
+  top: 0;
+  position: absolute;
+  display: block;
+  height: 100%;
+  left: -20px;
+}
+.service-wrapper .needknow-content .needknow-content-r {
+  margin: 0 0 0 20px;
+}
+.service-wrapper .needknow-content .item {
+  width: 326px;
+  min-height: 220px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.service-wrapper .needknow-content .item .hd-title {
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #aaa;
+  font-weight: normal;
+}
+.service-wrapper .needknow-content .item .needknow-txt {
+  margin-top: 20px;
+  text-align: left;
+  line-height: 28px;
+}
+.service-wrapper .search-box {
+  float: none;
+  padding: 50px 100px 0px 0;
+  text-align: right;
+}
+.service-wrapper .search-box .input-txt {
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  width: 355px;
+  padding: 0 0 0 5px;
+}
+.service-wrapper .search-box .search-btn {
+  width: 95px;
+  height: 38px;
+  color: #fff;
+  border: 1px solid #9f060d;
+  background-color: #e0141d;
+  border-radius: 2px;
+}
+.service-wrapper .question-box {
+  width: 1000px;
+  border-top: 3px solid #444;
+  clear: both;
+  overflow: hidden;
+  margin: 40px 0 0 100px;
+}
+.service-wrapper .question-box tr > th {
+  border-bottom: 1px solid #bdbdbd;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+}
+.service-wrapper .question-box tr > th.index,
+.service-wrapper .question-box tr > th.status {
+  width: 170px;
+}
+.service-wrapper .question-box tr > th.title {
+  width: 660px;
+}
+.service-wrapper .question-box tr > td {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+}
+.service-wrapper .question-box .resolve {
+  color: #f3801a;
+}
+.service-wrapper .question-box .question-form {
+  padding: 30px 0 50px 0;
+  text-align: left;
+}
+.service-wrapper .question-box .question-form li {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.service-wrapper .question-box .question-form li:last-child {
+  text-align: right;
+}
+.service-wrapper .question-box .question-form li .Validform_checktip {
+  margin-left: 60px;
+  clear: both;
+}
+.service-wrapper .question-box .question-form label {
+  vertical-align: top;
+  font-size: 16px;
+  text-align: left;
+  width: 60px;
+  float: left;
+  display: inline-block;
+}
+.service-wrapper .question-box .question-form .input-txt {
+  border: 1px solid #ccc;
+  width: 928px;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.service-wrapper .question-box .question-form .textarea {
+  border: 1px solid #ccc;
+  width: 928px;
+  float: left;
+  height: 140px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.service-wrapper .question-box .question-form .question-btn {
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  background-color: #9d8583;
+  border: 0;
+  color: #fff;
+}
+.service-wrapper .question-box .question-content {
+  color: #666;
+  font-size: 13px;
+}
+.service-wrapper .question-box .question-content h1 {
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: normal;
+  padding: 10px 0;
+}
+.service-wrapper .question-box .question-content .time {
+  color: #999;
+}
+.service-wrapper .question-box .question-content .question-nr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 50px 0;
+  margin: 20px 0;
+  line-height: 30px;
+  text-align: left;
+  font-size: 13px;
+}
+.service-wrapper .question-box .question-content .question-ask {
+  text-align: left;
+  line-height: 30px;
+  padding-bottom: 50px;
+}
+.service-wrapper .question-box .question-content .question-ask .bt {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.service-wrapper .complaint-form {
+  width: 1000px;
+  margin: 60px auto;
+}
+.service-wrapper .complaint-form li {
+  margin-bottom: 15px;
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+}
+.service-wrapper .complaint-form li:last-child {
+  text-align: right;
+}
+.service-wrapper .complaint-form li input {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  border: 1px solid #ddd;
+  float: left;
+  width: 240px;
+}
+.service-wrapper .complaint-form li select {
+  width: 140px;
+  float: left;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+.service-wrapper .complaint-form li .input-txt {
+  width: 870px;
+}
+.service-wrapper .complaint-form li .textarea {
+  width: 870px;
+  border: 1px solid #ddd;
+  height: 140px;
+  padding: 5px;
+  float: left;
+}
+.service-wrapper .complaint-form li .question-btn {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border: 1px solid #9f060d;
+  background-color: #db121a;
+  float: none;
+  margin-right: 8px;
+}
+.service-wrapper .complaint-form label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 30px;
+}
+.service-wrapper .complaint-form label em {
+  color: #e5171f;
+}
+.service-wrapper .settings-img {
+  padding: 70px 0;
+  text-align: center;
+}
+.settings-wrapper .wrapper {
+  width: 1282px;
+}
+.service_tel {
+  position: fixed;
+  right: 80px;
+  top: 200px;
+}

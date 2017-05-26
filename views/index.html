@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://cdn.drore.com/cdn/less/reset.min.css" />
+    <link rel="stylesheet" href="/css/home.css?v=4d255d24fb" />
+    <title>台州府城</title>
+</head>
+<body>
+{{include './public/head.html'}}
+<div class="banner">
+    <img src="img/banner.jpg" alt="" />
+</div>
+<div class="top-bar">
+    <div class="wrapper">
+        <div class="time">
+            {{today}}
+            <span class="week">星期{{week}}</span>
+        </div>
+        <div class="search-box">
+            <form action="/news/all/page/1">
+            <input type="text" id="title" name="title" placeholder="输入您想查找的关键词" class="input-txt" />
+            <input type="submit" value="搜索" class="search-btn" />
+            </form>
+        </div>
+    </div>
+</div>
+<div class="home-col">
+    <div class="wrapper">
+        <div class="slide-news">
+            <!--轮播start-->
+            <ul class="focus-pic-list">
+                {{each data.banner.data list idx}}
+                <li>
+                    <a href="/newsDetail/{{list.id}}"><img src="{{list.img}}" alt=""></a>
+                </li>
+                {{/each}}
+            </ul>
+            <div class="info-box">
+                <ul class="focus-txt-list">
+                    {{each data.banner.data list idx}}
+                    <li>
+                        <h2>{{list.title}}</h2>
+                        <p>{{list.description}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+                <ul class="focus-nav-list">
+                    {{each data.banner.data list idx}}
+                    <li>
+                        <a href="/newsDetail/{{list.id}}">{{list.title}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <!--轮播end-->
+
+        </div>
+        <div class="right-col-news">
+            <div class="hot-news">
+                <h2><img src="img/hot-news.png" alt=""></h2>
+                <ul class="hot-news-box">
+                    {{each data.hot.data list idx}}
+                    <li>
+                        <div class="hot-news-info">
+                            <h3>
+                                <a href="/newsDetail/{{list.id}}"><span class="greater-than"> > </span>{{list.title}}</a>
+                            </h3>
+                            <p class="time">{{list.create_time.substr(0,10)}}</p>
+                        </div>
+                        <div class="hot-news-img">
+                            <a href="/newsDetail/{{list.id}}"><img src="{{list.img}}" alt="" /></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="home-ads">
+                <a href="/organization"><img src="img/functional.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home-col">
+    <div class="wrapper">
+        <div class="gov-news">
+            <h2 class="hd-title"><span>政务动态</span></h2>
+            <div class="gov-news-box">
+                {{if data.zwdt.count != 0}}
+                <ul>
+                    {{each data.zwdt.data list}}
+                    <li>
+                        <a href="/newsDetail/{{list.id}}"><img src="{{list.img}}" alt=""></a>
+                        <p class="time">{{list.create_time.substr(0,10)}}</p>
+                        <h3 class="title"><a href="/newsDetail/{{list.id}}">{{list.title}}</a></h3>
+                        <div class="desc">
+                            {{list.description}}
+                        </div>
+                        <p class="views">
+                            <i class="icon-views"></i> {{list.click_num}}
+                        </p>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{else}}
+                <div>暂无数据</div>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="home-col-item">
+            <div class="home-col-notice">
+                <h2 class="title">
+                    通知公告
+                </h2>
+                <ul>
+                    {{if data.tzgg.count != 0}}
+                    {{each data.tzgg.data list}}
+                    <li>
+                        <h4><a href="/newsDetail/{{list.id}}">{{list.title}}</a></h4>
+                        <div>
+                            {{list.description}}
+                        </div>
+                    </li>
+                    {{/each}}
+                    {{else}}
+                    <li><p class="data-empty">暂无数据</p></li>
+                    {{/if}}
+
+                </ul>
+            </div>
+            <div class="home-col-dynamic">
+                <h2 class="title"><span>行业动态</span></h2>
+                <ul>
+                    {{if data.hydt.count != 0}}
+                    {{each data.hydt.data list idx}}
+                    {{if idx < 3}}
+                    <li>
+                        <img src="{{list.img}}" alt="">
+                        <div class="info">
+                            <h4><a href="/newsDetail/{{list.id}}">{{list.title}}</a></h4>
+                            <div class="desc">{{list.description}}</div>
+                            <p class="views"><i class="icon-views"></i>{{list.click_num}}</p>
+                        </div>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                    {{else}}
+                    <li>
+                        <p class="data-empty">暂无数据</p>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+            <div class="home-col-guid">
+                <h2 class="title"><span>办事指南</span></h2>
+                <div class="menu-box">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">经营场所审批</a>
+                        </li>
+                    <!--<li><a href="#">旅游发展规划</a></li>
+                    <li><a href="#">旅游景区等级</a></li>
+                    <li><a href="#">旅游资源调查</a></li>
+                    <li><a href="#">导游员培训</a></li>
+                    <li><a href="#">星级饭店评定</a></li>
+                    <li><a href="#">旅游社申报</a></li>
+                    <li><a href="#">导游IC卡办理</a></li>
+                    <li><a href="#">导游IC卡年审</a></li>
+                    <li><a href="#">个体经营申报</a></li>-->
+                    </ul>
+                </div>
+                <div class="complaint-box">
+                    <p class="item">
+                    <span><a href="/tousuxuzhi">投诉须知</a></span>
+                    <span><a href="/tousuxuzhi">投诉流程</a></span>
+                    <span><a href="/advice/page/1">进度查询</a></span>
+                    </p>
+                    <p class="tel">
+                        <img src="img/tel.png" alt="">
+                    </p>
+                </div>
+                <div class="link">
+                    <a href="http://lyfz.linhai.gov.cn/" target="_blank">
+                        <img src="img/link1.jpg" alt="" />
+                    </a>
+                    <a href="javascript:;">
+                        <img src="img/link2.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{include './public/foot.html'}}
+<script type="text/javascript">
+    $(function(){
+        $(".slide-news").slide({
+            titCell: ".focus-nav-list li",
+            mainCell: ".focus-pic-list",
+            targetCell: ".focus-txt-list li",
+            autoPlay: true,
+            delayTime: 100,
+            effect:'fade'
+        });
+    });
+</script>
+</body>
+</html>
